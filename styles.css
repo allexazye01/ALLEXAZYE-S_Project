@@ -1,0 +1,257 @@
+/* Cyberpunk Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d0d0d;
+    color: #00ffea;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Dorong footer ke bawah */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: rgba(10, 10, 30, 0.9);
+    padding-top: 30px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateX(250px);
+}
+
+.sidebar h2 {
+    margin-left: 20px;
+    color: #ff00ff;
+    font-weight: 600;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 20px;
+    color: #00ffea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    border-radius: 10px;
+}
+
+/* Menu Button */
+.menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #ff00ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1100;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.menu-toggle.hide {
+    display: none;
+}
+
+/* Shop Title */
+.shop-title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffea;
+    color: #00ffea;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(90deg, #ff00ff, #00ffea, #ff00ff) 1;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 20px auto;
+}
+
+/* Our Product Title */
+.our-product {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff00ff;
+    color: #00ffea;
+    position: relative;
+}
+
+.our-product::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff00ff, #00ffea, #ff00ff);
+    margin-top: 5px;
+    box-shadow: 0 0 10px #00ffea;
+}
+
+/* Hero Section */
+#hero {
+    background: url('cyberpunk-banner.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+#hero h1 {
+    font-size: 3em;
+    text-shadow: 0 0 15px #ff00ff;
+}
+
+#moto {
+    text-align: center;
+    background: rgba(255, 0, 255, 0.1);
+    padding: 20px 20px;
+    margin-top: -20px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+#moto h2 {
+    font-size: 2.5em;
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+#moto p {
+    font-size: 1.2em;
+    color: #00ffea;
+}
+
+.cta-btn {
+    background: linear-gradient(45deg, #ff00ff, #00ffea);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.cta-btn:hover {
+    background: #ff2e00;
+    box-shadow: 0 0 20px #00ffea;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #00ffea;
+    text-shadow: 0 0 5px #00ffea;
+    width: 100%;
+    position: relative; /* Pastikan tetap di bawah */
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+    z-index: -1;
+}
+
+h1.welcome-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #00ffea;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #ff00ff;
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 10, 30, 0.9);
+    border: 3px solid #ff00ff;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffea;
+    margin: 30px auto;
+}
+
+.footer-glow {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff00ff, #00ffea, #ff00ff);
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffea;
+    animation: glowing-line 3s infinite linear;
+}
+
+@keyframes glowing-line {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+}
+
+.logo {
+    font-size: 150px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    animation: spin 3s linear infinite;
+    margin-top: 30px; /* Tambahin margin biar turun */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+        }

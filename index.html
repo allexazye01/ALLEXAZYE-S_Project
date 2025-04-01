@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALLEXAZYE'S_STORE</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link ke CSS -->
+    <audio id="bg-music" loop>
+        <source src="Allexazye's Song♫.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="music.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div> <!-- Tempat buat background animasi -->
     <div class="overlay" id="overlay" onclick="closeMenu()"></div>
     <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
     
@@ -20,24 +26,36 @@
         <a href="login.html">Login</a>
     </div>
     
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to ALLEXAZYE_STORE!</h1>
-            <p>Find the best deals on top products</p>
-            <button class="cta-btn" onclick="location.href='shop.html'">Shop Now</button>
-        </div>
-        <div class="moto-content">
-            <h2>Quality, Trust, and Innovation</h2>
-            <p>Your Ultimate Shopping Destination!</p>
-        </div>
-    </section>
-
+    <!-- Konten utama dengan class main-content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="welcome-text">Welcome to Allexazye's Store</h1>
+                <p>↓Find the best deals on top products↓</p>
+                <button class="cta-btn" onclick="location.href='shop.html'">Shop Now</button>
+            </div>
+            <div class="moto-content">
+                <h2>Quality, Trust, and Innovation</h2>
+                <p>Your Ultimate Shopping Destination!</p>
+            </div>
+            
+            <div class="logo">𖡹</div>
+            
+        </section>
+    </div>
+    <div class="footer-glow"></div>
     <!-- Footer -->
     <footer>
         <p>© 2025 ALLEXAZYE'S_STORE. All rights reserved.</p>
     </footer>
-
+    <script src="particles.min.js"></script> 
+    <!-- Library Particles.js -->
+    <script>
+        particlesJS.load('particles-js', 'particles-config.json', function() {
+            console.log('Particles.js loaded!');
+        });
+    </script>
     <script src="script.js"></script> <!-- Link ke JS -->
 </body>
 </html>
